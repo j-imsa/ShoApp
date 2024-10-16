@@ -11,5 +11,5 @@ public interface ProductService {
 
     List<ProductDto> readAll(int page, int size);
 
-    ProductDto delete(String publicId);
+    boolean delete(String publicId);
 }

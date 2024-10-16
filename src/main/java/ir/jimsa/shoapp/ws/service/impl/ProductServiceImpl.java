@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Transactional
     @Override
-    public ProductDto delete(String publicId) {
-        return null;
+    public boolean delete(String publicId) {
+        return false;
     }
 }

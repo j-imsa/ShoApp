@@ -14,6 +14,11 @@ public class ProjectConstants {
     public static final String PRODUCT_DTO_DOCUMENT_NAME = "Appointment";
     public static final String PRODUCT_DTO_DOCUMENT_DESCRIPTION = "This is 'AppointmentDto'";
 
+    // ======================== SHOP ======================== //
+    public static final String SHOP_DOCUMENT_NAME = "Product endpoint";
+    public static final String SHOP_DOCUMENT_DESCRIPTION = "Rest APIs Shop details";
+    public static final String SHOP_PATH = "/" + APP_VERSION + "/shop";
+
 
     // ======================== General ======================== //
     public static final long GENERAL_DURATION = 30L;
@@ -28,9 +33,9 @@ public class ProjectConstants {
     public static final String GENERAL_SIZE_DEFAULT_VALUE = "10";
     public static final String GENERAL_SORT_FIELD_DEFAULT_VALUE = "time";
     public static final String GENERAL_SORT_DIRECTION = "sort_direction";
-    public static final String DOCTOR_GET_PATH = "/{" + GENERAL_DATE_FIELD + "}";
-    public static final String DOCTOR_DELETE_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
-    public static final String PATIENT_POST_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
+    public static final String SHOP_GET_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
+    public static final String SHOP_DELETE_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
+    public static final String SHOP_POST_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
 
 
     // ======================== UTILITY ======================== //
@@ -125,6 +130,17 @@ public class ProjectConstants {
     public static final String API_DOCUMENT_SERVERS_2_DESCRIPTION = "Dev, Server";
     public static final String API_DOCUMENT_SERVERS_2_URL = "http://152.11.42.185:8090/";
 
+    // ======================== Document ======================== //
+    public static final String GENERAL_DOCUMENT_PAGE_EXAMPLE = "3";
+    public static final String GENERAL_DOCUMENT_SIZE_EXAMPLE = "25";
+
+    public static final String SHOP_DOCUMENT_POST_SUMMERY = "Doctor: Create appointments";
+    public static final String SHOP_DOCUMENT_POST_DESCRIPTION = "Create some new appointments using POST method and getting request body";
+    public static final String SHOP_DOCUMENT_GET_SUMMERY = "Doctor/Patient: Read all appointments with different types";
+    public static final String SHOP_DOCUMENT_GET_DESCRIPTION = "Read all appointments using GET method, by type";
+    public static final String SHOP_DOCUMENT_DELETE_SUMMERY = "Doctor: Delete an appointment";
+    public static final String SHOP_DOCUMENT_DELETE_DESCRIPTION = "Delete an appointment using DELETE method and getting a valid public_id as a parameter";
+
 
     // ======================== API Documents ======================== //
     public static final String API_DOCUMENT_DEFAULT_SUMMERY = "Default summary";
@@ -153,4 +169,74 @@ public class ProjectConstants {
     public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_2_VALUE = "xyz789xyz789xyz789x@%&*";
     public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_2_SUMMERY = "Example public ID 2, Invalid";
 
+    // @CreateAppointmentRequestDocument
+    public static final String API_DOCUMENT_SHOP_POST_201_DESCRIPTION = "Creating products with the provided info was successful";
+    public static final String API_DOCUMENT_SHOP_POST_201_EXAMPLE = """
+            {
+                "action": true,
+                "timestamp": "15/09/2024 09:54:59 AM",
+                "result": {
+                        "name": "jafar",
+                        "public_id": "9sL0JIT4om-J230FyV-hq6JPfbstKIpTFzpqmpsBYM9yvSEBLzd62F5nV9LEOlaF"
+                    }
+            }
+            """;
+    public static final String API_DOCUMENT_SHOP_POST_400_EXAMPLE = """
+            {
+              "action": false,
+              "timestamp": "10/09/2024 10:01:13 PM",
+              "result": {
+                "publicId": "public_id must be null on the creation operation",
+                "start-end": "The start time must BE before the end time! It means this formula must be true: 'abs(end-start) > 1s' and be sure that 'The start can not be 23:59:59 (MAX) and the end can not be 00:00:00 (MIN)'"
+              }
+            }
+            """;
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_DESCRIPTION = "This request comes with a date, start and end time";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_1_NAME = "A valid request with a valid body #1";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_1_SUMMERY = "Valid example #1";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_1_VALUE = """
+            {
+              "name": "jafar"
+            }
+            """;
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_2_NAME = "An invalid request without a valid body #1";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_2_SUMMERY = "Invalid example #1";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_2_VALUE = """
+            {
+              "name": "     "
+            }
+            """;
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_3_NAME = "An invalid request without a valid body #2";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_3_SUMMERY = "Invalid example #2";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_3_VALUE = """
+            {
+              "name": ":)"
+            }
+            """;
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_4_NAME = "An invalid request without a valid body #3";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_4_SUMMERY = "Invalid example #3";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_4_VALUE = """
+            {
+              "name": "jafar",
+              "public_id": "9sL0JIT4om-J230FyV-hq6JPfbstKIpTFzpqmpsBYM9yvSEBLzd62F5nV9LEOlaF"
+            }
+            """;
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_5_NAME = "An invalid request without a valid body #4";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_5_SUMMERY = "Invalid example #4";
+    public static final String API_DOCUMENT_SHOP_POST_REQUEST_BODY_EXAMPLE_5_VALUE = """
+            {
+              "name": "@#$"
+            }
+            """;
+    public static final String API_DOCUMENT_500_EXAMPLE = """
+            {
+              "action": false,
+              "timestamp": "10/09/2024 10:20:30 PM",
+              "result": {
+                "path": "{METHOD} /{VERSION}/{PATH-PID-...}",
+                "message": "Internal service error!"
+              }
+            }
+            """;
+    
 }
