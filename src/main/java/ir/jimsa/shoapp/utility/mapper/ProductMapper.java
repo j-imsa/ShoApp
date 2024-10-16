@@ -11,14 +11,14 @@ import org.springframework.stereotype.Component;
 public class ProductMapper {
     private final PublicIdGenerator publicIdGenerator;
 
-    public Product mapToEntity(ProductDto dto) {
+    public static Product mapToEntity(ProductDto dto) {
         return Product.builder()
                 .publicId(dto.getPublicId())
                 .name(dto.getName())
                 .build();
     }
 
-    public ProductDto mapToDto(Product entity) {
+    public static ProductDto mapToDto(Product entity) {
         return ProductDto.builder()
                 .publicId(entity.getPublicId())
                 .name(entity.getName())

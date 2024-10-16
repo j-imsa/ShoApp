@@ -11,8 +11,9 @@ public class ProjectConstants {
     // ======================== PRODUCT ======================== //
     public static final String PRODUCT_DATABASE_TABLE_NAME = "products";
     public static final String PRODUCT_DATABASE_JOIN_ID = "product_id";
-    public static final String PRODUCT_DTO_DOCUMENT_NAME = "Appointment";
-    public static final String PRODUCT_DTO_DOCUMENT_DESCRIPTION = "This is 'AppointmentDto'";
+    public static final String PRODUCT_DTO_DOCUMENT_NAME = "Product";
+    public static final String PRODUCT_DTO_DOCUMENT_DESCRIPTION = "This is 'ProductDto'";
+    public static final String PRODUCT_NAME_FIELD = "name";
 
     // ======================== SHOP ======================== //
     public static final String SHOP_DOCUMENT_NAME = "Product endpoint";
@@ -99,7 +100,7 @@ public class ProjectConstants {
     public static final String GENERAL_EXCEPTION_MESSAGE = "message";
     public static final String GENERAL_EXCEPTION_PATH = "path";
 
-    public static final String EXCEPTION_DATE_MESSAGE = "This day has been initialized before!";
+    public static final String EXCEPTION_NAME_MESSAGE = "This name has been initialized before!";
     public static final String EXCEPTION_START_END_FORMAT_MESSAGE = "The start time should be less than the end time";
     public static final String EXCEPTION_NOT_FOUND_RESOURCE_MESSAGE = "The resource with provided public_id not founded!";
     public static final String EXCEPTION_NOT_FOUND_RESOURCE_BY_PHONE_NUMBER_MESSAGE = "The resource with provided phone_number not founded!";
@@ -134,7 +135,7 @@ public class ProjectConstants {
     public static final String GENERAL_DOCUMENT_PAGE_EXAMPLE = "3";
     public static final String GENERAL_DOCUMENT_SIZE_EXAMPLE = "25";
 
-    public static final String SHOP_DOCUMENT_POST_SUMMERY = "Doctor: Create appointments";
+    public static final String SHOP_DOCUMENT_POST_SUMMERY = "Shop: Create product";
     public static final String SHOP_DOCUMENT_POST_DESCRIPTION = "Create some new appointments using POST method and getting request body";
     public static final String SHOP_DOCUMENT_GET_SUMMERY = "Doctor/Patient: Read all appointments with different types";
     public static final String SHOP_DOCUMENT_GET_DESCRIPTION = "Read all appointments using GET method, by type";
@@ -187,7 +188,7 @@ public class ProjectConstants {
               "timestamp": "10/09/2024 10:01:13 PM",
               "result": {
                 "publicId": "public_id must be null on the creation operation",
-                "start-end": "The start time must BE before the end time! It means this formula must be true: 'abs(end-start) > 1s' and be sure that 'The start can not be 23:59:59 (MAX) and the end can not be 00:00:00 (MIN)'"
+                "name": "The name must BE ..."
               }
             }
             """;
