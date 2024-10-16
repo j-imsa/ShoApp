@@ -86,4 +86,71 @@ public class ProjectConstants {
     public static final String TIME_FORMAT_EXAMPLE = "18:14:05";
     public static final String DATE_TIME_FORMAT = "dd/MM/yyyy hh:mm:ss a";
 
+    // ======================== Exception ======================== //
+    public static final String GENERAL_EXCEPTION_NULL = "null";
+    public static final String GENERAL_EXCEPTION_NULL_MESSAGE = "Unfortunately, initialization failed, and the Null object was detected! Please report this status to the developers' team.";
+    public static final String GENERAL_EXCEPTION_LOG_PATTERN = "{} : {}";
+    public static final String GENERAL_EXCEPTION_REGEX = "%s %s";
+    public static final String GENERAL_EXCEPTION_MESSAGE = "message";
+    public static final String GENERAL_EXCEPTION_PATH = "path";
+
+    public static final String EXCEPTION_DATE_MESSAGE = "This day has been initialized before!";
+    public static final String EXCEPTION_START_END_FORMAT_MESSAGE = "The start time should be less than the end time";
+    public static final String EXCEPTION_NOT_FOUND_RESOURCE_MESSAGE = "The resource with provided public_id not founded!";
+    public static final String EXCEPTION_NOT_FOUND_RESOURCE_BY_PHONE_NUMBER_MESSAGE = "The resource with provided phone_number not founded!";
+    public static final String EXCEPTION_NOT_ACCEPTABLE_RESOURCE_MESSAGE = "The resource with provided public_id founded with a relation, so you can not remove it!";
+    public static final String EXCEPTION_RESOURCE_ALREADY_EXIST_MESSAGE = "The appointment has already been reserved!";
+    public static final String EXCEPTION_RESOURCE_ALREADY_DELETED_MESSAGE = "The appointment has already been deleted!";
+
+    public static final String EXCEPTION_METHOD_METHOD_ARGUMENT_NOT_VALID = "MethodArgumentNotValid";
+    public static final String EXCEPTION_METHOD_HTTP_MESSAGE_NOT_READABLE = "HttpMessageNotReadable";
+    public static final String EXCEPTION_METHOD_APP_SERVICE_EXCEPTION = "AppServiceExceptions";
+    public static final String EXCEPTION_METHOD_OPTIMISTIC_LOCK_EXCEPTION = "OptimisticLockException";
+    public static final String EXCEPTION_METHOD_CONSTRAINT_VIOLATION_EXCEPTION = "ConstraintViolationExceptions";
+    public static final String EXCEPTION_METHOD_APP_500_EXCEPTION = "App500Exceptions";
+
+    // ======================== API Definition ======================== //
+    public static final String API_DOCUMENT_INFO_TITLE = "ShoApp";
+    public static final String API_DOCUMENT_INFO_DESCRIPTION = "Microservice REST API documentation";
+    public static final String API_DOCUMENT_INFO_VERSION = APP_VERSION;
+    public static final String API_DOCUMENT_INFO_CONTACT_NAME = "Iman Salehi";
+    public static final String API_DOCUMENT_INFO_CONTACT_URL = "https://www.linkedin.com/in/jimsa/";
+    public static final String API_DOCUMENT_INFO_CONTACT_EMAIL = "cse.isalehi@gmail.com";
+    public static final String API_DOCUMENT_INFO_LICENSE_NAME = "Apache 2.0";
+    public static final String API_DOCUMENT_INFO_LICENSE_URL = "https://www.apache.org/licenses/LICENSE-2.0";
+    public static final String API_DOCUMENT_EXTERNAL_DOCS_DESCRIPTION = "Source code repository";
+    public static final String API_DOCUMENT_EXTERNAL_DOCS_URL = "https://github.com/j-imsa/shoapp";
+    public static final String API_DOCUMENT_SERVERS_1_DESCRIPTION = "Dev, local";
+    public static final String API_DOCUMENT_SERVERS_1_URL = "http://localhost:8088/";
+    public static final String API_DOCUMENT_SERVERS_2_DESCRIPTION = "Dev, Server";
+    public static final String API_DOCUMENT_SERVERS_2_URL = "http://152.11.42.185:8090/";
+
+
+    // ======================== API Documents ======================== //
+    public static final String API_DOCUMENT_DEFAULT_SUMMERY = "Default summary";
+    public static final String API_DOCUMENT_DEFAULT_DESCRIPTION = "Default description";
+
+    public static final String API_DOCUMENT_RESPONSE_CODE_200 = "200";
+    public static final String API_DOCUMENT_RESPONSE_CODE_201 = "201";
+    public static final String API_DOCUMENT_RESPONSE_CODE_400 = "400";
+    public static final String API_DOCUMENT_RESPONSE_CODE_404 = "404";
+    public static final String API_DOCUMENT_RESPONSE_CODE_406 = "406";
+    public static final String API_DOCUMENT_RESPONSE_CODE_409 = "409";
+    public static final String API_DOCUMENT_RESPONSE_CODE_500 = "500";
+
+    public static final String API_DOCUMENT_400_DESCRIPTION = "Due to invalid inputs, it responded as a bad request";
+    public static final String API_DOCUMENT_404_DESCRIPTION = "Due to invalid public_id, it responded a not-found";
+    public static final String API_DOCUMENT_406_DESCRIPTION = "This appointment has a related patient, so it can not be removed";
+    public static final String API_DOCUMENT_409_DESCRIPTION = "This appointment has been reserved before";
+    public static final String API_DOCUMENT_500_DESCRIPTION = "Internal server error has occurred";
+
+    public static final String API_DOCUMENT_PUBLIC_ID_DESCRIPTION = "The public_id of the resource";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE = "a7vqO-mCBzlJpgGjSU-HYsTpLblN4El-UEmr8M9LMIm01dqmNIqENiE0RiLIfu9e";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_1_NAME = "Valid example";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_1_VALUE = "a7vqO-mCBzlJpgGjSU-HYsTpLblN4El-UEmr8M9LMIm01dqmNIqENiE0RiLIfu9e";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_1_SUMMERY = "Example public ID 1, Valid";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_2_NAME = "Invalid example";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_2_VALUE = "xyz789xyz789xyz789x@%&*";
+    public static final String API_DOCUMENT_PUBLIC_ID_EXAMPLE_2_SUMMERY = "Example public ID 2, Invalid";
+
 }
