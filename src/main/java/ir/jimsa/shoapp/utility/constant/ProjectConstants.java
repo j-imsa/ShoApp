@@ -11,6 +11,27 @@ public class ProjectConstants {
     // ======================== PRODUCT ======================== //
     public static final String PRODUCT_DATABASE_TABLE_NAME = "products";
     public static final String PRODUCT_DATABASE_JOIN_ID = "product_id";
+    public static final String PRODUCT_DTO_DOCUMENT_NAME = "Appointment";
+    public static final String PRODUCT_DTO_DOCUMENT_DESCRIPTION = "This is 'AppointmentDto'";
+
+
+    // ======================== General ======================== //
+    public static final long GENERAL_DURATION = 30L;
+    public static final String GENERAL_STRING_TYPE = "string";
+    public static final String GENERAL_STATUS_FIELD = "status";
+    public static final String GENERAL_DATE_FIELD = "date";
+    public static final String GENERAL_SORT_FIELD = "sort_field";
+    public static final String GENERAL_PUBLIC_ID_FIELD = "public_id";
+    public static final String GENERAL_SORT_DIRECTION_ASC_FIELD = "asc";
+    public static final String GENERAL_SORT_DIRECTION_DESC_FIELD = "desc";
+    public static final String GENERAL_PAGE_DEFAULT_VALUE = "1";
+    public static final String GENERAL_SIZE_DEFAULT_VALUE = "10";
+    public static final String GENERAL_SORT_FIELD_DEFAULT_VALUE = "time";
+    public static final String GENERAL_SORT_DIRECTION = "sort_direction";
+    public static final String DOCTOR_GET_PATH = "/{" + GENERAL_DATE_FIELD + "}";
+    public static final String DOCTOR_DELETE_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
+    public static final String PATIENT_POST_PATH = "/{" + GENERAL_PUBLIC_ID_FIELD + "}";
+
 
     // ======================== UTILITY ======================== //
     public static final String ANONYMOUS_USER = "AnonymousUser";
@@ -46,5 +67,23 @@ public class ProjectConstants {
     public static final String GENERAL_VALIDATION_TIME_SEQUENCE_DEFAULT_MESSAGE = "The time sequence isn't valid!";
     public static final String GENERAL_VALIDATION_SORT_DIRECTION_PATTERN = "asc|desc";
     public static final String GENERAL_VALIDATION_SORT_DIRECTION_PATTERN_MESSAGE = "sort direction must be 'asc' or 'desc'";
+
+    public static final String PRODUCT_VALIDATION_PUBLIC_ID_NULL_MESSAGE = "public_id must BE null on the creation operation";
+
+    // ======================== Response ======================== //
+    public static final String RESPONSE_DOCUMENT_NAME = "App Response";
+    public static final String RESPONSE_DOCUMENT_DESCRIPTION = "This is 'ResponseDto'";
+    public static final String RESPONSE_DOCUMENT_ACTION_DESCRIPTION = "What is the final result? It will be true if the process is finished without any faults, otherwise, it is false.";
+    public static final String RESPONSE_DOCUMENT_ACTION_EXAMPLE = "true";
+    public static final String RESPONSE_DOCUMENT_TIMESTAMP = "The time of response";
+    public static final String RESPONSE_DATE_TIME_FORMAT_EXAMPLE = "16/09/2024 23:11:14 PM";
+    public static final String RESPONSE_DOCUMENT_RESULT = "The result of the response, including boolean, object, list, and so on";
+
+    // ======================== DATE TIME ======================== //
+    public static final String DATE_FORMAT = "dd-MM-yyyy";
+    public static final String DATE_FORMAT_EXAMPLE = "16-09-2024";
+    public static final String TIME_FORMAT = "HH:mm:ss";
+    public static final String TIME_FORMAT_EXAMPLE = "18:14:05";
+    public static final String DATE_TIME_FORMAT = "dd/MM/yyyy hh:mm:ss a";
 
 }
