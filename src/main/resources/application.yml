@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: shoapp
+  datasource:
+    url: jdbc:h2:mem:shoapp
+    driverClassName: org.h2.Driver
+    username: jimsa
+    password: jimi@123
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  port: 8088
+#  servlet:
+#    context-path: /shoapp/v1
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /docs-ui
+    operations-sorter: method
+#    tags-sorter: alpha
+#  writer-with-order-by-keys: true
